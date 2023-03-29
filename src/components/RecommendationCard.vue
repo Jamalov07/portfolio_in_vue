@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[350px] bg-white text-[#2B2B2B] h-[323px] p-[25px] flex flex-col justify-between"
+    class="w-[250px] sm:w-[350px] bg-white text-[#2B2B2B] h-[323px] p-[25px] flex flex-col justify-between"
   >
     <div class="flex gap-2 items-center text-[#FFB400]">
       <i class="bx bxs-star"></i>
@@ -15,7 +15,7 @@
       in ac dictum a urna viverra morbi. Morbi donec amet....
     </p>
     <div class="flex gap-3">
-      <div class="w-16 h-16">
+      <div class="w-10 h-10 sm:w-16 sm:h-16">
         <slot></slot>
       </div>
       <div class="h-full flex justify-center items-center flex-col">

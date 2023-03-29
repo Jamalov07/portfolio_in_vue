@@ -1,21 +1,22 @@
 <template>
   <div class="mx-auto bg-[#F0F0F6]">
     <div class="flex justify-between">
+      <div
+        class="xl:hidden flex justify-between w-[100%] px-2 py-1 absolute top-0 z-20 text-white text-3xl bg-[#9e8888ad]"
+      >
+        <i class="bx bxs-user-detail" @click="profile"></i>
+        <i class="bx bx-menu" @click="menu"></i>
+      </div>
       <Profile
-        class="profile absolute lg:block z-20 md:sticky"
+        class="xl:flex absolute z-20 left-0 top-0 xl:static"
         :class="[isProfileOpen ? 'block' : 'hidden']"
-      />
-      <i
-        v-if="isProfileOpen"
-        @click="profile"
-        class="bx bx-x absolute lg:hidden text-4xl text-white z-20 p-2 bg-green-500 left-[242px] rounded-md"
-      ></i>
-      <i
-        v-if="!isProfileOpen"
-        class="bx bx-info-circle lg:hidden absolute text-4xl text-white z-20 p-2 bg-green-500 rounded-md"
-        @click="profile"
-      ></i>
-      <main class="w-[1440px] h-auto">
+      >
+        <i
+          class="bx bx-x text-3xl p-[1px] bg-lime-500 rounded-md"
+          @click="profile"
+        ></i>
+      </Profile>
+      <main class="w-full md:w-[1440px] h-auto">
         <Home />
         <Service />
         <PricePlans />
@@ -29,7 +30,15 @@
         <Brands />
         <Footer />
       </main>
-      <Sidebar />
+      <Sidebar
+        class="xl:block absolute xl:static right-0 top-0 z-20"
+        :class="[isMenuOpen ? 'block' : 'hidden']"
+      >
+        <i
+          class="bx bx-chevron-right text-xl p-[1px] bg-white rounded-md"
+          @click="menu"
+        ></i>
+      </Sidebar>
     </div>
   </div>
 </template>
@@ -59,6 +68,11 @@ export default {
   methods: {
     profile() {
       this.isProfileOpen = !this.isProfileOpen;
+      this.isMenuOpen = false;
+    },
+    menu() {
+      this.isMenuOpen = !this.isMenuOpen;
+      this.isProfileOpen = false;
     },
   },
   mounted() {},

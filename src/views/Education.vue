@@ -1,10 +1,10 @@
 <template>
   <div
-    class="mt-[70px] flex flex-col justify-between min-h-[955px] items-center"
+    class="mt-5 sm:mt-[70px] flex flex-col justify-between min-h-[955px] items-center"
   >
     <h1 class="h-10 mx-auto text-[#2B2B2B] text-[32px] font-bold">Education</h1>
     <p
-      class="text-[15px] text-[#767676] font-normal h-[68px] w-[438px] text-center"
+      class="text-[15px] text-[#767676] font-normal px-4 sm:px-0 pb-4 sm:pb-0 sm:h-[68px] md:px-16 xl:px-0 xl:w-[438px] text-center"
     >
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
@@ -19,10 +19,10 @@
         <img
           src="https://picsum.photos/id/147/600/600"
           alt=""
-          class="w-[420px] h-full"
+          class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
       </EducationCard>
-      <hr class="m-3" />
+      <hr class="my-3" />
       <EducationCard
         :reverse="true"
         title="Programming Course"
@@ -33,10 +33,10 @@
         <img
           src="https://picsum.photos/id/186/600/600"
           alt=""
-          class="w-[420px] h-full"
+          class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
       </EducationCard>
-      <hr class="m-3" />
+      <hr class="my-3" />
       <EducationCard
         title="Web Developer Courses"
         position="Student"
@@ -46,7 +46,7 @@
         <img
           src="https://picsum.photos/id/347/600/600"
           alt=""
-          class="w-[420px] h-full"
+          class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
       </EducationCard>
     </div>

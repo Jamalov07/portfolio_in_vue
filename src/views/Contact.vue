@@ -1,10 +1,12 @@
 <template>
-  <div class="mt-[70px] min-h-[766px] flex gap-4 justify-between w-full">
-    <div class="flex flex-col gap-6 w-3/5">
-      <h1 class="text-[#2B2B2B] text-[32px] font-semibold">
+  <div
+    class="mt-5 sm:mt-[70px] min-h-[766px] flex gap-4 justify-between xl:flex-row flex-col w-full px-4 xl:px-0"
+  >
+    <div class="flex flex-col gap-6 xl:w-3/5">
+      <h1 class="text-[#2B2B2B] text-[26px] sm:text-[32px] font-semibold">
         Leave Us Your Info
       </h1>
-      <div class="h-full p-6 bg-white">
+      <div class="h-full p-2 sm:p-6 bg-white">
         <form
           action="#"
           class="flex flex-col h-full justify-between text-[#767676] text-[18px] font-medium"
@@ -43,8 +45,8 @@
         </form>
       </div>
     </div>
-    <div class="flex flex-col gap-6 w-2/5">
-      <h1 class="text-[#2B2B2B] text-[32px] font-semibold">
+    <div class="flex flex-col gap-6 xl:w-2/5">
+      <h1 class="text-[#2B2B2B] text-[26px] sm:text-[32px] font-semibold">
         Contact Information
       </h1>
 

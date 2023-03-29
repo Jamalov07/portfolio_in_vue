@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[350px] min-h-[609px] p-6 pt-[50px] flex flex-col justify-between items-center text-[#2B2B2B] bg-white relative"
+    class="w-[250px] sm:w-[350px] min-h-[609px] p-6 pt-[50px] flex flex-col justify-between items-center text-[#2B2B2B] bg-white relative"
   >
     <div
       v-if="popular"

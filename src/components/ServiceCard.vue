@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[350px] h-[255px] flex flex-col gap-4 items-center bg-white"
+    class="w-[250px] sm:w-[350px] h-[255px] flex flex-col gap-4 items-center bg-white"
     :class="[end ? 'px-6 text-center py-3' : 'py-6',]"
   >
     <div>

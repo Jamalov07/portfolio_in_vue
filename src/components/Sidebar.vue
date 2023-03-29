@@ -1,5 +1,8 @@
 <template>
   <div class="w-[108px] h-[1315px] bg-white pt-[50px] px-[20px]">
+    <div class="absolute top-0 -left-4 xl:hidden">
+      <slot></slot>
+    </div>
     <div class="w-full h-[493px]">
       <div class="flex justify-center items-center">
         <svg
@@ -23,9 +26,10 @@
         </svg>
       </div>
       <div class="mt-20 flex flex-col h-full gap-6 items-center">
-        <div class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center">
+        <div
+          class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+        >
           <svg
-          
             width="18"
             height="18"
             viewBox="0 0 18 18"
@@ -45,7 +49,9 @@
             </defs>
           </svg>
         </div>
-        <div class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center">
+        <div
+          class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+        >
           <svg
             width="18"
             height="18"
@@ -71,7 +77,9 @@
             </defs>
           </svg>
         </div>
-        <div class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center">
+        <div
+          class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+        >
           <svg
             width="18"
             height="18"
@@ -92,7 +100,9 @@
             </defs>
           </svg>
         </div>
-        <div class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center">
+        <div
+          class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+        >
           <svg
             width="18"
             height="18"
@@ -113,7 +123,9 @@
             </defs>
           </svg>
         </div>
-        <div class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center">
+        <div
+          class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+        >
           <svg
             width="18"
             height="18"
@@ -134,7 +146,9 @@
             </defs>
           </svg>
         </div>
-        <div class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center">
+        <div
+          class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+        >
           <svg
             width="18"
             height="18"

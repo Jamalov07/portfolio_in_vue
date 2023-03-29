@@ -1,7 +1,10 @@
 <template>
   <div
-    class="w-[305px] bg-white p-8 h-[1315px] flex flex-col justify-between items-center"
+    class="w-[305px] p-8 h-[1215px] bg-white flex flex-col justify-between items-center"
   >
+    <div class="absolute right-1 top-1 xl:hidden">
+      <slot></slot>
+    </div>
     <div class="h-[281px] w-[220px] flex flex-col justify-between items-center">
       <div class="relative">
         <img

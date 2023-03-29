@@ -1,5 +1,7 @@
 <template>
-  <div class="h-full w-[350px] flex flex-col justify-between bg-white">
+  <div
+    class="h-full w-[250px] sm:w-[350px] flex flex-col justify-between bg-white"
+  >
     <img
       src="https://picsum.photos/id/191/600/600"
       alt="img"
