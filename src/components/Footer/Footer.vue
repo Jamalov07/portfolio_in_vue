@@ -1,5 +1,11 @@
 <template>
-  <footer>footer</footer>
+  <footer
+    class="mt-[70px] w-full h-[60px] flex justify-center items-center bg-white"
+  >
+    <div class="text-[#2B2B2B] text-[15px] font-normal">
+      2021 All Rights Reserved. OjjoMedia
+    </div>
+  </footer>
 </template>
 <script>
 export default {

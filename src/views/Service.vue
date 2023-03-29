@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mt-[128px] flex flex-col justify-between min-h-[653px] items-center"
+    class="mt-[70px] flex flex-col justify-between min-h-[723px] items-center"
   >
     <h1 class="h-10 w-[193px] text-[#2B2B2B] text-[32px] font-bold">
       My Services
@@ -11,7 +11,7 @@
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
     </p>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-4 gap-4">
       <ServiceCard title="Web Development" subTitle="Blog, E-Commerce">
         <img src="../assets/icons/coding.svg" alt="" />
       </ServiceCard>
@@ -26,6 +26,12 @@
         subTitle="Character Design, Props & Objects"
       >
         <img src="../assets/icons/game-development.svg" alt="" />
+      </ServiceCard>
+      <ServiceCard title="Photography" subTitle="portrait, product photography">
+        <img src="../assets/icons/Photographer.svg" alt="" />
+      </ServiceCard>
+      <ServiceCard title="Photography" subTitle="portrait, product photography">
+        <img src="../assets/icons/Photographer.svg" alt="" />
       </ServiceCard>
       <ServiceCard title="Photography" subTitle="portrait, product photography">
         <img src="../assets/icons/Photographer.svg" alt="" />

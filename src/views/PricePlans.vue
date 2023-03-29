@@ -11,7 +11,13 @@
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
     </p>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-4 gap-4">
+      <PriceCard
+        :bools="[1, 1, 0, 0, 0, 0, 0, 0]"
+        title="Silver"
+        :popular="false"
+        price="0.00"
+      />
       <PriceCard
         :bools="[1, 1, 0, 0, 0, 0, 0, 0]"
         title="Silver"

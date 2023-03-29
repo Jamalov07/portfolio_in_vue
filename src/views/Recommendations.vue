@@ -11,7 +11,7 @@
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
     </p>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-4 gap-4">
       <RecommendationCard
         title="Great Quality!"
         full_name="James Gouse"
@@ -23,6 +23,18 @@
           class="rounded-full"
         />
       </RecommendationCard>
+      <RecommendationCard
+      title="Great Quality!"
+      full_name="James Gouse"
+      position="Graphic Designer"
+    >
+      <img
+        src="https://picsum.photos/id/167/200/200"
+        alt="img"
+        class="rounded-full"
+      />
+    </RecommendationCard>
+    
       <RecommendationCard
         title="Amazing Work!"
         full_name="Tiana Philips"
@@ -46,7 +58,8 @@
         />
       </RecommendationCard>
     </div>
-    <div class="h-3 w-14 mx-auto flex justify-between">
+    <div class="h-3 w-[60px] mx-auto flex justify-between">
+      <div class="w-[10px] h-[10px] rounded-full bg-[#FFB400]"></div>
       <div class="w-[10px] h-[10px] rounded-full bg-[#FFB400]"></div>
       <div class="w-[10px] h-[10px] rounded-full bg-[#FFB400]"></div>
       <div class="w-[10px] h-[10px] rounded-full bg-[#FFB400]"></div>

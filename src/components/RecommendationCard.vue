@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[310px] bg-white text-[#2B2B2B] h-[323px] p-[25px] flex flex-col justify-between"
+    class="w-[350px] bg-white text-[#2B2B2B] h-[323px] p-[25px] flex flex-col justify-between"
   >
     <div class="flex gap-2 items-center text-[#FFB400]">
       <i class="bx bxs-star"></i>
