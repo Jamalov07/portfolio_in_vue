@@ -1,7 +1,8 @@
 <template>
   <div>
     <div
-      class="flex justify-between items-center text-[#767676] text-[15px] font-normal"
+      class="flex justify-between items-center text-[15px] font-normal"
+      :class="[defineTheme().isLight ? 'text-[#767676]' : 'text-white']"
     >
       <h1>{{ title }}</h1>
       <h1>{{ percent }}</h1>
@@ -17,6 +18,7 @@
   </div>
 </template>
 <script>
+import themeStore from "../store/theme";
 export default {
   name: "Language",
   props: {
@@ -27,6 +29,12 @@ export default {
     return {
       percent: this.inPercent,
     };
+  },
+  methods: {
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
   },
 };
 </script>

@@ -1,12 +1,17 @@
 <template>
   <div
-  id="cv"
-    class="pro w-[305px] p-8 h-[1215px] bg-[#e7d3d3ef] xl:bg-white flex flex-col justify-between items-center"
+    id="cv"
+    class="pro w-[305px] p-8 h-[1215px] flex flex-col justify-between items-center"
+    :class="[
+      defineTheme().isLight
+        ? 'bg-[#e7d3d3ef] xl:bg-white'
+        : 'bg-[#15273def] xl:bg-[#1f1e46]',
+    ]"
   >
     <div class="absolute right-1 top-1 xl:hidden">
       <slot></slot>
     </div>
-    <div class="h-[281px]  w-[220px] flex flex-col justify-between items-center">
+    <div class="h-[281px] w-[220px] flex flex-col justify-between items-center">
       <div class="relative">
         <img
           src="../assets/images/iforgit.jpg"
@@ -18,7 +23,10 @@
         ></div>
       </div>
       <div class="flex flex-col justify-between items-center gap-[15px]">
-        <h1 class="text-[#2B2B2B] font-medium text-[18px]">
+        <h1
+          class="font-medium text-[18px]"
+          :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
+        >
           No'monjon Jamalov
         </h1>
         <h1
@@ -65,28 +73,52 @@
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
     <div
-      class="h-[126px] w-[220px] text-[15px] font-normal text-[#2B2B2B] flex flex-col justify-between"
+      class="h-[126px] w-[220px] text-[15px] font-normal flex flex-col justify-between"
+      :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
     >
       <div class="flex justify-between items-center">
-        <div class="px-[6px] bg-[#FFB400]">Age:</div>
+        <div
+          class="px-[6px]"
+          :class="[defineTheme().isLight ? 'bg-[#FFB400]' : 'bg-[#0bb6fa]']"
+        >
+          Age:
+        </div>
         <h1>23</h1>
       </div>
       <div class="flex justify-between items-center">
-        <div class="px-[6px] bg-[#FFB400]">Residence:</div>
+        <div
+          class="px-[6px]"
+          :class="[defineTheme().isLight ? 'bg-[#FFB400]' : 'bg-[#0bb6fa]']"
+        >
+          Residence:
+        </div>
         <h1>UZ</h1>
       </div>
       <div class="flex justify-between items-center">
-        <div class="px-[6px] bg-[#FFB400]">Freelance:</div>
+        <div
+          class="px-[6px]"
+          :class="[defineTheme().isLight ? 'bg-[#FFB400]' : 'bg-[#0bb6fa]']"
+        >
+          Freelance:
+        </div>
         <h1 class="text-[#7EB942]">Available</h1>
       </div>
       <div class="flex justify-between items-center">
-        <div class="px-[6px] bg-[#FFB400]">Address:</div>
+        <div
+          class="px-[6px]"
+          :class="[defineTheme().isLight ? 'bg-[#FFB400]' : 'bg-[#0bb6fa]']"
+        >
+          Address:
+        </div>
         <h1>Tashkent, Uzbekistan</h1>
       </div>
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
     <div class="w-[220px] h-[153px]">
-      <h1 class="mb-[15px] text-[18px] text-[#2B2B2B] font-medium">
+      <h1
+        class="mb-[15px] text-[18px] font-medium"
+        :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
+      >
         Languages
       </h1>
       <div class="flex h-full flex-col gap-2">
@@ -97,7 +129,12 @@
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
     <div class="w-[220px] h-[242px]">
-      <h1 class="mb-[15px] text-[18px] text-[#2B2B2B] font-medium">Skills</h1>
+      <h1
+        class="mb-[15px] text-[18px] font-medium"
+        :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
+      >
+        Skills
+      </h1>
       <div class="flex h-full flex-col gap-2">
         <PercentGraphic title="Javascript, Typescript" inPercent="90%" />
         <PercentGraphic title="Node,Nest,Express,Koa" inPercent="100%" />
@@ -108,7 +145,10 @@
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
     <div class="w-[186px] h-[148px]">
-      <h1 class="mb-[15px] text-[18px] text-[#2B2B2B] font-medium">
+      <h1
+        class="mb-[15px] text-[18px] font-medium"
+        :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
+      >
         Extra Skills
       </h1>
       <div class="flex flex-col justify-between gap-[5px]">
@@ -122,7 +162,7 @@
     <div
       class="cv h-10 w-full flex hover:bg-sky-500 hover:text-yellow-50 justify-between items-center py-[10px] px-[45px] bg-[#FFB400]"
     >
-      <h1 class="uppercase  text-[#2B2B2B] text-[14px] font-semibold">
+      <h1 class="uppercase text-[#2B2B2B] text-[14px] font-semibold">
         Download cv
       </h1>
       <svg
@@ -143,20 +183,26 @@
 <script>
 import ExtraSkills from "./ExtraSkills.vue";
 import PercentGraphic from "./PercentGraphic.vue";
+import themeStore from "../store/theme";
 export default {
   name: "Profile",
   components: {
     PercentGraphic,
     ExtraSkills,
   },
+  methods: {
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
+  },
 };
 </script>
 <style scoped>
-
-.cv:hover >h1{
-  color:white
+.cv:hover > h1 {
+  color: white;
 }
-.cv:hover>svg>path{
+.cv:hover > svg > path {
   fill: white;
 }
 </style>

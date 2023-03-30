@@ -1,14 +1,27 @@
 <template>
   <div
-    class="w-[108px] h-screen bg-[#9e8888ad] xl:bg-white pt-[50px] px-[20px]"
+    class="w-[108px] h-screen pt-[50px] px-[20px]"
+    :class="[
+      defineTheme().isLight
+        ? 'bg-[#9e8888ad] xl:bg-white'
+        : 'bg-[#15273def] xl:bg-[#1f1e46]',
+    ]"
   >
     <div class="absolute top-0 left-0 xl:hidden">
       <slot></slot>
     </div>
     <div class="w-full h-[493px]">
       <div class="flex justify-center items-center bg-white rounded-full">
-        <i v-if="true" class="bx bxs-moon text-2xl"></i>
-        <i v-if="false" class="bx bxs-sun text-2xl"></i>
+        <i
+          v-if="defineTheme().isLight"
+          @click="changeTheme"
+          class="bx bxs-moon text-2xl"
+        ></i>
+        <i
+          v-if="!defineTheme().isLight"
+          @click="changeTheme"
+          class="bx bxs-sun text-2xl"
+        ></i>
       </div>
       <div class="mt-20 flex flex-col h-full gap-6 items-center">
         <a href="#home" class="home" @click="changeActive('.home')">
@@ -176,9 +189,6 @@
 </template>
 <script>
 import themeStore from "../store/theme";
-const theme = themeStore();
-
-
 
 export default {
   name: "Sidebar",
@@ -193,10 +203,15 @@ export default {
         newActive.classList.add("active");
       }
     },
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
+    changeTheme() {
+      this.defineTheme().isLight = !this.defineTheme().isLight;
+    },
   },
-  mounted() {
-    console.log(theme)
-  }
+  mounted() {},
 };
 </script>
 <style scoped>
