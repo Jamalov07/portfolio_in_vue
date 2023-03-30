@@ -18,9 +18,9 @@
         position="Graphic Designer"
       >
         <img
-          src="https://picsum.photos/id/167/200/200"
+          src="https://picsum.photos/600/600"
           alt="img"
-          class="rounded-full"
+          class="rounded-full w-[70px]"
         />
       </RecommendationCard>
       <RecommendationCard
@@ -29,9 +29,9 @@
         position="Graphic Designer"
       >
         <img
-          src="https://picsum.photos/id/167/200/200"
+          src="https://picsum.photos/600/600"
           alt="img"
-          class="rounded-full"
+          class="rounded-full w-[70px]"
         />
       </RecommendationCard>
 
@@ -41,9 +41,9 @@
         position="Photographer"
       >
         <img
-          src="https://picsum.photos/id/197/200/200"
+          src="https://picsum.photos/600/600"
           alt="img"
-          class="rounded-full"
+          class="rounded-full w-[70px]"
         />
       </RecommendationCard>
       <RecommendationCard
@@ -52,9 +52,9 @@
         position="Business Man"
       >
         <img
-          src="https://picsum.photos/id/227/200/200"
+          src="https://picsum.photos/600/600"
           alt="img"
-          class="rounded-full"
+          class="rounded-full w-[70px]"
         />
       </RecommendationCard>
     </div>

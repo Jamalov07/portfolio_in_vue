@@ -1,5 +1,6 @@
 <template>
   <div
+  id="portfolio"
     class="mt-5 sm:mt-[70px] flex flex-col justify-between min-h-[1265px] items-center mb-0"
   >
     <h1 class="h-10 mx-auto text-[#2B2B2B] text-[32px] font-bold">Portfolio</h1>
@@ -13,7 +14,7 @@
     <div
       class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:flex md:justify-between md:w-full md:px-10 xl:flex xl:justify-between xl:w-[602px] mb-4 xl:mb-0 xl:h-[22px] text-[#2B2B2B] text-[18px] font-medium"
     >
-      <h1>All Categories</h1>
+      <h1 class="active">All Categories</h1>
       <h1>UI Design</h1>
       <h1>Web Templates</h1>
       <h1>Logo</h1>
@@ -22,72 +23,27 @@
     <div
       class="min-h-[950px] xl:w-full grid md:grid-cols-2 xl:grid-cols-4 gap-8"
     >
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
-      <img
-        src="https://picsum.photos/id/181/600/600"
-        alt="img"
-        class="w-[250px] sm:w-[320px] h-[250px] sm:h-[310px]"
-      />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
+      <PortfolioCard />
     </div>
   </div>
 </template>
 <script>
+import PortfolioCard from "../components/PortfolioCard.vue";
+
 export default {
   name: "Portfolio",
+  components: { PortfolioCard },
 };
 </script>
 <style></style>

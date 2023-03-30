@@ -13,40 +13,39 @@
     </p>
     <div class="min-h-[792px] w-full p-7 flex flex-col bg-white">
       <EducationCard
-        title="Lead Web Designer"
-        position="Student"
-        date="Jan 1016 - Dec 2021"
-        subtitle="Certificate Of Web Training"
+        title="Anonymous company"
+        position="Internship"
+        date="Jan 2022 - Dec 2023"
+        subtitle="Node js backend developer"
       >
         <img
-          src="https://picsum.photos/id/211/600/600"
+          src="https://picsum.photos/600/600"
           alt=""
           class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
       </EducationCard>
       <hr class="my-3" />
       <EducationCard
-        :reverse="true"
-        title="Junior Web Designer"
-        position="Student"
-        date="Jan 1016 - Dec 2021"
-        subtitle="Certificate Of Web Training"
+        title="Anonymous company"
+        position="Junior"
+        date="Jan 2022 - Jan 2023"
+        subtitle="Frontend Developer"
       >
         <img
-          src="https://picsum.photos/id/222/600/600"
+          src="https://picsum.photos/600/600"
           alt=""
           class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
       </EducationCard>
       <hr class="my-3" />
       <EducationCard
-        title="Senior Web Designer"
-        position="Student"
-        date="Jan 1016 - Dec 2021"
-        subtitle="Certificate Of Web Training"
+        title="Anonymous company"
+        position="Junior"
+        date="Jan 2023 - Dec 2023"
+        subtitle="Junior Backend Developer"
       >
         <img
-          src="https://picsum.photos/id/132/600/600"
+          src="https://picsum.photos/600/600"
           alt=""
           class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />

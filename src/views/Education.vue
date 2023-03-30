@@ -11,13 +11,13 @@
     </p>
     <div class="min-h-[792px] w-full p-7 flex flex-col bg-white">
       <EducationCard
-        title="University Of Toronto"
+        title="Tashkent State University of Economics"
         position="Student"
-        date="Jan 1016 - Dec 2021"
-        subtitle="Certificate Of Web Training"
+        date="Sep 2020 - Aug 2025"
+        subtitle="Bachelor degree"
       >
         <img
-          src="https://picsum.photos/id/147/600/600"
+          src="https://picsum.photos/600/600"
           alt=""
           class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
@@ -25,13 +25,13 @@
       <hr class="my-3" />
       <EducationCard
         :reverse="true"
-        title="Programming Course"
+        title="Najot ta'lim programming training center"
         position="Student"
-        date="Jan 1016 - Dec 2021"
-        subtitle="Certificate Of Web Training"
+        date="Jun 2022 - Mar 2023"
+        subtitle="Course completion certificate"
       >
         <img
-          src="https://picsum.photos/id/186/600/600"
+          src="https://picsum.photos/600/600"
           alt=""
           class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />
@@ -44,7 +44,7 @@
         subtitle="Certificate Of Web Training"
       >
         <img
-          src="https://picsum.photos/id/347/600/600"
+          src="https://picsum.photos/600/600"
           alt=""
           class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
         />

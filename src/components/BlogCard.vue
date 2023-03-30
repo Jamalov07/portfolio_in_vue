@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-full w-[250px] sm:w-[350px] flex flex-col justify-between bg-white"
+    class="h-full w-[250px] sm:w-[350px] xl:w-auto flex flex-col justify-between bg-white"
   >
     <img
       src="https://picsum.photos/id/191/600/600"

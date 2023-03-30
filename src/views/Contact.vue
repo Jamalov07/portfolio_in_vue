@@ -1,5 +1,6 @@
 <template>
   <div
+    id="contact"
     class="mt-5 sm:mt-[70px] min-h-[766px] flex gap-4 justify-between xl:flex-row flex-col w-full px-4 xl:px-0"
   >
     <div class="flex flex-col gap-6 xl:w-3/5">

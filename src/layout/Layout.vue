@@ -1,11 +1,11 @@
 <template>
   <div class="mx-auto bg-[#F0F0F6]">
-    <div class="flex justify-between">
+    <div class="flex sm:justify-between 2xl:justify-center 2xl:gap-4">
       <div
         class="xl:hidden flex justify-between w-[100%] px-2 py-1 absolute top-0 z-20 text-white text-3xl bg-[#9e8888ad]"
       >
         <i class="bx bxs-user-detail" @click="profile"></i>
-        <i class="bx bx-menu" @click="menu"></i>
+        <i v-if="!isMenuOpen" class="bx bx-menu" @click="menu"></i>
       </div>
       <Profile
         class="xl:flex absolute z-20 left-0 top-0 xl:static"
@@ -31,11 +31,11 @@
         <Footer />
       </main>
       <Sidebar
-        class="xl:block absolute xl:static right-0 top-0 z-20"
+        class="xl:block absolute xl:sticky right-0 top-0 z-20"
         :class="[isMenuOpen ? 'block' : 'hidden']"
       >
         <i
-          class="bx bx-chevron-right text-xl p-[1px] bg-white rounded-md"
+          class="bx bx-chevron-right text-xl p-[1px] bg-[#9e8888ad] xl:bg-white rounded-md text-white"
           @click="menu"
         ></i>
       </Sidebar>

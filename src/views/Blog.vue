@@ -1,5 +1,6 @@
 <template>
   <div
+    id="blog"
     class="mt-5 sm:mt-[70px] flex flex-col justify-between min-h-[665px] items-center mb-0"
   >
     <h1 class="h-10 mx-auto text-[#2B2B2B] text-[32px] font-bold">Blog</h1>

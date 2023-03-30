@@ -1,5 +1,6 @@
 <template>
   <div
+  id="service"
     class="mt-4 sm:mt-[70px] flex flex-col justify-between min-h-[723px] items-center"
   >
     <h1 class="h-10 w-[193px] text-[#2B2B2B] text-[32px] font-bold">
@@ -13,35 +14,28 @@
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
       <ServiceCard title="Web Development" subTitle="Blog, E-Commerce">
-        <img src="../assets/icons/coding.svg" alt="" />
+        <img src="../assets/icons/coding.svg" alt="" class="pb-2" />
       </ServiceCard>
-      <ServiceCard title="UI/UX Design" subTitle="Mobile app, website design">
-        <img src="../assets/icons/Group.svg" alt="" />
+      <ServiceCard title="Typescript" subTitle="Clean and organized code">
+        <i class="bx bxl-typescript text-6xl text-[#FFB400]"></i>
       </ServiceCard>
-      <ServiceCard title="Sound Design" subTitle="Voice Over, Beat Making">
-        <img src="../assets/icons/Microphone.svg" alt="" />
+      <ServiceCard title="Docker with PM2" subTitle="To deploy to the server">
+        <i class="bx bxl-docker text-6xl text-[#FFB400]"></i>
       </ServiceCard>
-      <ServiceCard
-        title="Game Design"
-        subTitle="Character Design, Props & Objects"
-      >
-        <img src="../assets/icons/game-development.svg" alt="" />
+      <ServiceCard title="Vue js" subTitle="To work with the frontend">
+        <i class="bx bxl-vuejs text-6xl text-[#FFB400]"></i>
       </ServiceCard>
-      <ServiceCard title="Photography" subTitle="portrait, product photography">
-        <img src="../assets/icons/Photographer.svg" alt="" />
+      <ServiceCard title="Node js" subTitle="To work with the backend">
+        <i class="bx bxl-nodejs text-6xl text-[#FFB400]"></i>
       </ServiceCard>
-      <ServiceCard title="Photography" subTitle="portrait, product photography">
-        <img src="../assets/icons/Photographer.svg" alt="" />
+      <ServiceCard title="PosgreSQL" subTitle="To work with databases">
+        <i class="bx bxl-postgresql text-6xl text-[#FFB400]"></i>
       </ServiceCard>
-      <ServiceCard title="Photography" subTitle="portrait, product photography">
-        <img src="../assets/icons/Photographer.svg" alt="" />
+      <ServiceCard title="Github" subTitle="To track the work done">
+        <i class="bx bxl-github text-6xl text-[#FFB400]"></i>
       </ServiceCard>
-      <ServiceCard
-        title="Advertising"
-        subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi."
-        end="true"
-      >
-        <!-- <img src="../assets/icons/game-development.svg" alt="" /> -->
+      <ServiceCard title="Github" subTitle="To track the work done">
+        <i class="bx bxl-github text-6xl text-[#FFB400]"></i>
       </ServiceCard>
     </div>
   </div>

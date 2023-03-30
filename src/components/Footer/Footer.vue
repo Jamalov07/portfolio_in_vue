@@ -3,7 +3,7 @@
     class="mt-[70px] w-full h-[60px] flex justify-center items-center bg-white"
   >
     <div class="text-[#2B2B2B] text-[15px] font-normal">
-      2021 All Rights Reserved. OjjoMedia
+     &copy; {{ new Date().getFullYear() }} Jamalov No'monjon
     </div>
   </footer>
 </template>

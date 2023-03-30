@@ -1,11 +1,12 @@
 <template>
   <div
-    class="w-[305px] p-8 h-[1215px] bg-white flex flex-col justify-between items-center"
+  id="cv"
+    class="pro w-[305px] p-8 h-[1215px] bg-[#e7d3d3ef] xl:bg-white flex flex-col justify-between items-center"
   >
     <div class="absolute right-1 top-1 xl:hidden">
       <slot></slot>
     </div>
-    <div class="h-[281px] w-[220px] flex flex-col justify-between items-center">
+    <div class="h-[281px]  w-[220px] flex flex-col justify-between items-center">
       <div class="relative">
         <img
           src="../assets/images/iforgit.jpg"
@@ -26,24 +27,39 @@
           Full Stack Developer
         </h1>
         <div class="flex justify-between items-center w-[219px]">
-          <i
-            class="bx bxl-facebook p-[6px] bg-[#FFB400] rounded-full text-[15px]"
-          ></i>
-          <i
-            class="bx bxl-instagram-alt p-[6px] bg-[#FFB400] rounded-full text-[15px]"
-          ></i>
-          <i
-            class="bx bxl-twitter p-[6px] bg-[#FFB400] rounded-full text-[15px]"
-          ></i>
-          <i
-            class="bx bxl-linkedin p-[6px] bg-[#FFB400] rounded-full text-[15px]"
-          ></i>
-          <i
-            class="bx bxl-youtube p-[6px] bg-[#FFB400] rounded-full text-[15px]"
-          ></i>
-          <i
-            class="bx bxl-telegram p-[6px] bg-[#FFB400] rounded-full text-[15px]"
-          ></i>
+          <a href="https://uz-uz.facebook.com/subhoniddin.jamalov">
+            <i
+              class="bx bxl-facebook p-[6px] bg-[#FFB400] hover:bg-sky-500 hover:text-yellow-50 rounded-full text-[15px]"
+            ></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/shaxabiddinovich07/?igshid=ZDdkNTZiNTM%3D"
+          >
+            <i
+              class="bx bxl-instagram-alt p-[6px] bg-[#FFB400] hover:bg-sky-500 hover:text-yellow-50 rounded-full text-[15px]"
+            ></i>
+          </a>
+          <a href="https://github.com/Jamalov07">
+            <i
+              class="bx bxl-github p-[6px] bg-[#FFB400] hover:bg-sky-500 hover:text-yellow-50 rounded-full text-[15px]"
+            ></i>
+          </a>
+          <a href="https://www.linkedin.com/in/nomonjon-jamalov">
+            <i
+              class="bx bxl-linkedin p-[6px] bg-[#FFB400] hover:bg-sky-500 hover:text-yellow-50 rounded-full text-[15px]"
+            ></i>
+          </a>
+          <a href="https://stackoverflow.com/users/20549543/nomonjon-jamalov">
+            <i
+              class="bx bxl-stack-overflow p-[6px] bg-[#FFB400] hover:bg-sky-500 hover:text-yellow-50 rounded-full text-[15px]"
+            ></i>
+          </a>
+          <a href="https://t.me/New_Prime_Minister_of_Uzbekistan">
+            <i
+              class="bx bxl-telegram p-[6px] bg-[#FFB400] hover:bg-sky-500 hover:text-yellow-50 rounded-full text-[15px]"
+            ></i>
+          </a>
         </div>
       </div>
     </div>
@@ -57,7 +73,7 @@
       </div>
       <div class="flex justify-between items-center">
         <div class="px-[6px] bg-[#FFB400]">Residence:</div>
-        <h1>BD</h1>
+        <h1>UZ</h1>
       </div>
       <div class="flex justify-between items-center">
         <div class="px-[6px] bg-[#FFB400]">Freelance:</div>
@@ -65,7 +81,7 @@
       </div>
       <div class="flex justify-between items-center">
         <div class="px-[6px] bg-[#FFB400]">Address:</div>
-        <h1>Dhaka, Bangladesh</h1>
+        <h1>Tashkent, Uzbekistan</h1>
       </div>
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
@@ -74,20 +90,20 @@
         Languages
       </h1>
       <div class="flex h-full flex-col gap-2">
-        <PercentGraphic title="Uzbek" inPercent="100" />
-        <PercentGraphic title="Uzbek" inPercent="100" />
-        <PercentGraphic title="Uzbek" inPercent="100" />
+        <PercentGraphic title="Uzbek" inPercent="100%" />
+        <PercentGraphic title="Russian" inPercent="70%" />
+        <PercentGraphic title="English" inPercent="50%" />
       </div>
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
     <div class="w-[220px] h-[242px]">
       <h1 class="mb-[15px] text-[18px] text-[#2B2B2B] font-medium">Skills</h1>
       <div class="flex h-full flex-col gap-2">
-        <PercentGraphic title="Html" inPercent="100" />
-        <PercentGraphic title="CSS" inPercent="100" />
-        <PercentGraphic title="Js" inPercent="100" />
-        <PercentGraphic title="PHP" inPercent="100" />
-        <PercentGraphic title="Wordpress" inPercent="100" />
+        <PercentGraphic title="Javascript, Typescript" inPercent="90%" />
+        <PercentGraphic title="Node,Nest,Express,Koa" inPercent="100%" />
+        <PercentGraphic title="Psql,MySQL,Mongo,Redis" inPercent="90%" />
+        <PercentGraphic title="HTML,CSS,Tailwind" inPercent="100%" />
+        <PercentGraphic title="Vue,Vuex,Pinia" inPercent="100%" />
       </div>
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
@@ -96,17 +112,17 @@
         Extra Skills
       </h1>
       <div class="flex flex-col justify-between gap-[5px]">
-        <ExtraSkills />
-        <ExtraSkills />
-        <ExtraSkills />
-        <ExtraSkills />
+        <ExtraSkills extra="C,Python,Docker,PM2" />
+        <ExtraSkills extra="Prisma,Graphql" />
+        <ExtraSkills extra="Bootstrap,Jest,SCSS" />
+        <ExtraSkills extra="Git,Github,TypeORM" />
       </div>
     </div>
     <hr class="w-full h-[2px] bg-[#F0F0F6]" />
     <div
-      class="h-10 w-full flex justify-between items-center py-[10px] px-[50px] bg-[#FFB400]"
+      class="cv h-10 w-full flex hover:bg-sky-500 hover:text-yellow-50 justify-between items-center py-[10px] px-[45px] bg-[#FFB400]"
     >
-      <h1 class="uppercase text-[#2B2B2B] text-[14px] font-semibold">
+      <h1 class="uppercase  text-[#2B2B2B] text-[14px] font-semibold">
         Download cv
       </h1>
       <svg
@@ -135,4 +151,12 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+
+.cv:hover >h1{
+  color:white
+}
+.cv:hover>svg>path{
+  fill: white;
+}
+</style>
