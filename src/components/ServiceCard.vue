@@ -1,8 +1,7 @@
 <template>
-  <div class="relative duration-300">
+  <div class="relative duration-300 mx-auto px-4 lg:mx-0  xl:px-0">
     <div
-      class="relative z-20 hover:opacity-0 w-[250px] sm:w-[350px] xl:w-auto h-[255px] flex flex-col gap-4 items-center bg-white"
-      :class="[end ? 'px-6 text-center py-3' : 'py-6']"
+      class="relative z-20 hover:opacity-0 w-[250px] sm:w-[350px] lg:w-auto py-6 xl:w-[100%] h-[255px] flex flex-col gap-4 items-center bg-white"
     >
       <div>
         <slot></slot>
@@ -11,7 +10,7 @@
       <h1 class="text-[15px] text-[#767676] font-normal">{{ subTitle }}</h1>
     </div>
     <div
-      class="absolute top-0 z-10 w-[250px] sm:w-[350px] xl:w-auto h-[255px] flex flex-col justify-center gap-4 items-center bg-white px-6 text-center py-3"
+      class="absolute top-0 z-10 w-[250px] sm:w-[350px] lg:w-auto xl:w-[100%] h-[255px] flex flex-col justify-center gap-4 lg:gap-2 xl:gap-4 items-center bg-white px-6 lg:px-3 xl:px-6 text-center py-3"
     >
       <h1 class="text-[18px] text-[#2B2B2B] font-medium">Advertising</h1>
       <h1 class="text-[15px] text-[#767676] font-normal">

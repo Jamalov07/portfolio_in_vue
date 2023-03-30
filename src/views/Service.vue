@@ -1,7 +1,7 @@
 <template>
   <div
   id="service"
-    class="mt-4 sm:mt-[70px] flex flex-col justify-between min-h-[723px] items-center"
+    class="mt-4 sm:mt-[70px] md:w-full flex flex-col justify-between min-h-[723px] items-center"
   >
     <h1 class="h-10 w-[193px] text-[#2B2B2B] text-[32px] font-bold">
       My Services
@@ -12,7 +12,7 @@
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-4 md:w-full">
       <ServiceCard title="Web Development" subTitle="Blog, E-Commerce">
         <img src="../assets/icons/coding.svg" alt="" class="pb-2" />
       </ServiceCard>

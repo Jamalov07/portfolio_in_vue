@@ -31,11 +31,11 @@
         <Footer />
       </main>
       <Sidebar
-        class="xl:block absolute xl:sticky right-0 top-0 z-20"
+        class="xl:block absolute sm:fixed md:fixed xl:sticky right-0 top-0 z-20"
         :class="[isMenuOpen ? 'block' : 'hidden']"
       >
         <i
-          class="bx bx-chevron-right text-xl p-[1px] bg-[#9e8888ad] xl:bg-white rounded-md text-white"
+          class="bx bx-chevron-right text-2xl p-[1px] xl:bg-white rounded-md text-white"
           @click="menu"
         ></i>
       </Sidebar>

@@ -34,7 +34,7 @@
         <img
           src="https://picsum.photos/600/600"
           alt=""
-          class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full xl:w-[420px]"
+          class="w-[420px] h-full md:h-[300px] xl:h-full md:w-full lg:w-[420px] xl:w-[420px]"
         />
       </EducationCard>
       <hr class="my-3" />

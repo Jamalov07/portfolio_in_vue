@@ -2,17 +2,18 @@
   <div
     class="w-[108px] h-screen bg-[#9e8888ad] xl:bg-white pt-[50px] px-[20px]"
   >
-    <div class="absolute top-0 -left-4 xl:hidden">
+    <div class="absolute top-0 left-0 xl:hidden">
       <slot></slot>
     </div>
     <div class="w-full h-[493px]">
       <div class="flex justify-center items-center bg-white rounded-full">
-        <i class="bx bxs-moon text-2xl"></i>
+        <i v-if="true" class="bx bxs-moon text-2xl"></i>
+        <i v-if="false" class="bx bxs-sun text-2xl"></i>
       </div>
       <div class="mt-20 flex flex-col h-full gap-6 items-center">
-        <a href="#home">
+        <a href="#home" class="home" @click="changeActive('.home')">
           <div
-            class="outline outline-yellow-300 p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+            class="active p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
             <svg
               width="18"
@@ -35,7 +36,7 @@
             </svg>
           </div>
         </a>
-        <a href="#service">
+        <a href="#service" class="service" @click="changeActive('.service')">
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -65,7 +66,7 @@
             </svg>
           </div>
         </a>
-        <a href="#cv">
+        <a href="#cv" class="cvres" @click="changeActive('.cvres')">
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -90,7 +91,11 @@
             </svg>
           </div>
         </a>
-        <a href="#portfolio">
+        <a
+          href="#portfolio"
+          class="portfolio"
+          @click="changeActive('.portfolio')"
+        >
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -115,7 +120,7 @@
             </svg>
           </div>
         </a>
-        <a href="#blog">
+        <a href="#blog" class="blog" @click="changeActive('.blog')">
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -140,7 +145,7 @@
             </svg>
           </div>
         </a>
-        <a href="#contact">
+        <a href="#contact" class="contact" @click="changeActive('.contact')">
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -170,8 +175,36 @@
   </div>
 </template>
 <script>
+import themeStore from "../store/theme";
+const theme = themeStore();
+
+
+
 export default {
   name: "Sidebar",
+  methods: {
+    changeActive(str) {
+      const active = window.document.querySelector(".active");
+      if (active) {
+        active.classList.remove("active");
+      }
+      const newActive = window.document.querySelector(str).querySelector("div");
+      if (newActive) {
+        newActive.classList.add("active");
+      }
+    },
+  },
+  mounted() {
+    console.log(theme)
+  }
 };
 </script>
-<style scoped></style>
+<style scoped>
+.active {
+  background-color: #ffb400 !important;
+}
+
+.active > svg > g > path {
+  fill: black !important;
+}
+</style>

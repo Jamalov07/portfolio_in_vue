@@ -43,6 +43,12 @@
               class="h-[210px] bg-[#F0F0F6] border-0"
             ></textarea>
           </label>
+          <button
+            type="submit"
+            class="px-6 mt-6 hover:bg-sky-500 hover:text-yellow-50  w-[30%] py-2 uppercase text-[#2B2B2B] text-[14px] bg-[#ffb400]"
+          >
+            Send Message
+          </button>
         </form>
       </div>
     </div>

@@ -1,9 +1,9 @@
 <template>
   <div
-    class="h-auto xl:h-[220px] flex justify-between flex-col xl:flex-row gap-2 xl:gap-0"
+    class="h-auto xl:h-auto flex justify-between xl:flex-wrap 2xl:h-auto flex-col xl:flex-row gap-2 xl:gap-0"
     :class="false ? 'flex-row-reverse' : ''"
   >
-    <div>
+    <div class="xl:h-[220px]">
       <slot></slot>
     </div>
     <div class="h-full flex flex-col gap-5">

@@ -16,7 +16,7 @@
         diam in ac dictum a urna
       </p>
       <div
-        class="h-5 w-22 flex gap-4 items-center text-[18px] text-[#FFB400] font-medium"
+        class="hover:text-sky-500 border-b border-transparent hover:border-sky-500 h-5 w-22 flex gap-4 items-center text-[18px] text-[#FFB400] font-medium"
       >
         <h1 class="uppercase">Learn More</h1>
         <i class="bx bx-chevron-right"></i>
