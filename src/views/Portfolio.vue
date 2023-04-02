@@ -1,58 +1,38 @@
 <template>
   <div
     id="portfolio"
-    class="mt-5 sm:mt-[70px] flex flex-col justify-between min-h-[1265px] items-center mb-0"
+    class="mt-10 xl:mt-5 flex flex-col justify-between items-center gap-4"
   >
-    <h1 class="h-10 mx-auto text-[#2B2B2B] text-[32px] font-bold">Portfolio</h1>
+    <h1 class="text-center text-[32px] font-bold">Portfolio</h1>
     <p
-      class="text-[15px] text-[#767676] font-normal pb-5 sm:pb-0 px-3 sm:px-0 sm:h-[68px] md:px-16 xl:px-0 xl:w-[438px] text-center"
+      class="text-[15px] text-[#767676] font-normal text-center w-[90%] md:w-[50%]"
     >
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
     </p>
 
     <div
-      class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:flex md:justify-between md:w-full md:px-10 xl:flex xl:justify-between xl:w-[602px] mb-4 xl:mb-0 xl:h-[22px] text-[#2B2B2B] text-[18px] font-medium"
+      class="flex justify-center flex-wrap items-center gap-x-8 gap-y-2 text-[18px] font-medium"
+      :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
     >
-      <h1
-        class="active2 hover:text-sky-500 allcat"
-        @click="changeActive2('.allcat')"
-      >
+      <router-link to="/portfolio/all" class="hover:text-sky-500">
         All Categories
-      </h1>
-      <h1 class="hover:text-sky-500 design" @click="changeActive2('.design')">
-        UI Design
-      </h1>
-      <h1
-        class="hover:text-sky-500 templates"
-        @click="changeActive2('.templates')"
-      >
-        Web Templates
-      </h1>
-      <h1 class="hover:text-sky-500 logo" @click="changeActive2('.logo')">
-        Logo
-      </h1>
-      <h1 class="hover:text-sky-500 brand" @click="changeActive2('.brand')">
-        Branding
-      </h1>
+      </router-link>
+      <router-link to="/portfolio/backend" class="hover:text-sky-500">
+        Backend
+      </router-link>
+      <router-link to="/portfolio/frontend" class="hover:text-sky-500">
+        Frontend
+      </router-link>
     </div>
-    <div
-      class="min-h-[950px] xl:w-full grid md:grid-cols-2 xl:grid-cols-4 gap-8"
-    >
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
+    <div class="flex justify-around gap-y-2 flex-wrap min-h-screen">
+      <router-view></router-view>
     </div>
   </div>
 </template>
 <script>
 import PortfolioCard from "../components/PortfolioCard.vue";
-
+import themeStore from "../store/theme";
 export default {
   name: "Portfolio",
   components: { PortfolioCard },
@@ -67,11 +47,16 @@ export default {
         newActive.classList.add("active2");
       }
     },
+
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
   },
 };
 </script>
 <style scoped>
-.active2 {
-  color: #ffb400 !important;
+.router-link-active {
+  color: #ffb400;
 }
 </style>

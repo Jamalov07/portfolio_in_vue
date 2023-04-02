@@ -3,7 +3,7 @@
     class="pt-4 sm:pt-12 flex flex-col gap-4 items-center"
     :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
   >
-    <h1 class="w-1/3 text-center text-[32px] font-bold">Recommendations</h1>
+    <h1 class="text-center text-[32px] font-bold">Recommendations</h1>
     <p
       class="text-[15px] text-[#767676] font-normal w-[90%] md:w-[50%] text-center"
     >
@@ -19,255 +19,8 @@
       :mousewheel="true"
       :keyboard="true"
       :modules="modules"
-      class="mySwiper hidden md:block"
-    >
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Amazing Work!"
-          full_name="Tiana Philips"
-          position="Photographer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="Talan Westervelt"
-          position="Business Man"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Amazing Work!"
-          full_name="Tiana Philips"
-          position="Photographer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="Talan Westervelt"
-          position="Business Man"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-    </swiper>
-    <swiper
-      :slides-per-view="2"
-      :space-between="20"
-      :cssMode="true"
-      :navigation="true"
-      :pagination="true"
-      :mousewheel="true"
-      :keyboard="true"
-      :modules="modules"
-      class="mySwiper hidden sm:block md:hidden"
-    >
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Amazing Work!"
-          full_name="Tiana Philips"
-          position="Photographer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="Talan Westervelt"
-          position="Business Man"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="James Gouse"
-          position="Graphic Designer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Amazing Work!"
-          full_name="Tiana Philips"
-          position="Photographer"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-      <swiper-slide>
-        <RecommendationCard
-          :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
-          title="Great Quality!"
-          full_name="Talan Westervelt"
-          position="Business Man"
-        >
-          <img
-            src="https://picsum.photos/600/600"
-            alt="img"
-            class="rounded-full w-[70px]"
-          />
-        </RecommendationCard>
-      </swiper-slide>
-    </swiper>
-    <swiper
-      :slides-per-view="1"
-      :space-between="20"
-      :cssMode="true"
-      :navigation="true"
-      :pagination="true"
-      :mousewheel="true"
-      :keyboard="true"
-      :modules="modules"
-      class="mySwiper sm:hidden"
+      :breakpoints="swiperOptions.breakpoints"
+      class="mySwiper"
     >
       <swiper-slide>
         <RecommendationCard
@@ -402,7 +155,31 @@ export default {
   },
   setup() {
     return {
-      modules: [Navigation, Pagination, Mousewheel, Keyboard],
+      modules: [Pagination, Mousewheel, Keyboard],
+      swiperOptions: {
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          520: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          770: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1350: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      },
     };
   },
   methods: {
@@ -433,27 +210,6 @@ export default {
 
 .swiper-button-prev,
 .swiper-button-next {
-  content: "1";
-  background-color: transparent !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(52, 230, 36) !important;
-  margin-top: 110px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  box-shadow: 0px 0px 1px 2px rgb(50, 228, 26);
-}
-
-.swiper-button-next:after {
-  content: "▶" !important;
-  font-family: sans-serif;
-  font-size: 15px;
-}
-.swiper-button-prev:after {
-  content: "◀" !important;
-  font-family: sans-serif;
-  font-size: 15px;
+  display: none;
 }
 </style>

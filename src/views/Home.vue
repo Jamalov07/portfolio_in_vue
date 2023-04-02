@@ -1,7 +1,7 @@
 <template>
   <div
     id="home"
-    class="w-full h-[600px] p-5 flex justify-center items-center gap-5 relative"
+    class="mt-12 xl:mt-0 w-full h-[600px] p-5 flex justify-center items-center gap-5 relative"
     :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
   >
     <HomeCircle class="left-5 top-5 rounded-full border-[#FFB400]" />

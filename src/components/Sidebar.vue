@@ -24,18 +24,18 @@
         ></i>
       </div>
       <div class="mt-20 flex flex-col h-full gap-6 items-center">
-        <a
-          href="#home"
-          class="home relative inline-block"
-          @click="changeActive('.home')"
-        >
+        <router-link to="/" class="home relative inline-block">
           <span
             class="tooltiptext"
-            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
             >Home</span
           >
           <div
-            class="active p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+            class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
             <svg
               width="18"
@@ -57,15 +57,15 @@
               </defs>
             </svg>
           </div>
-        </a>
-        <a
-          href="#service"
-          class="service relative inline-block"
-          @click="changeActive('.service')"
-        >
+        </router-link>
+        <a href="#service" class="service relative inline-block">
           <span
             class="tooltiptext"
-            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
             >Service</span
           >
 
@@ -98,14 +98,14 @@
             </svg>
           </div>
         </a>
-        <a
-          href="#cv"
-          class="cvres relative inline-block"
-          @click="changeActive('.cvres')"
-        >
+        <a href="#cv" class="cvres relative inline-block">
           <span
             class="tooltiptext"
-            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
             >CV</span
           >
 
@@ -133,14 +133,14 @@
             </svg>
           </div>
         </a>
-        <a
-          href="#portfolio"
-          class="portfolio relative inline"
-          @click="changeActive('.portfolio')"
-        >
+        <router-link to="/portfolio" class="portfolio relative inline">
           <span
             class="tooltiptext"
-            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
             >Portfolio</span
           >
 
@@ -167,15 +167,15 @@
               </defs>
             </svg>
           </div>
-        </a>
-        <a
-          href="#blog"
-          class="blog relative inline"
-          @click="changeActive('.blog')"
-        >
+        </router-link>
+        <router-link to="/blog" class="blog relative inline">
           <span
             class="tooltiptext"
-            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
             >Blog</span
           >
 
@@ -202,15 +202,15 @@
               </defs>
             </svg>
           </div>
-        </a>
-        <a
-          href="#contact"
-          class="contact relative inline-block"
-          @click="changeActive('.contact')"
-        >
+        </router-link>
+        <router-link to="/contact" class="contact relative inline-block">
           <span
             class="tooltiptext"
-            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
             >Contact</span
           >
 
@@ -237,7 +237,24 @@
               </defs>
             </svg>
           </div>
-        </a>
+        </router-link>
+        <router-link to="/history" class="history relative inline-block">
+          <span
+            class="tooltiptext"
+            :class="[
+              defineTheme().isLight
+                ? 'bg-[#2b2b2b] text-white'
+                : 'bg-white text-[#2B2B2B]',
+            ]"
+            >History</span
+          >
+
+          <div
+            class="px-3 py-2 rounded-full bg-[#f0f0f6] flex justify-center items-center"
+          >
+            <i class="bx bx-history text-lg"></i>
+          </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -248,16 +265,6 @@ import themeStore from "../store/theme";
 export default {
   name: "Sidebar",
   methods: {
-    changeActive(str) {
-      const active = window.document.querySelector(".active");
-      if (active) {
-        active.classList.remove("active");
-      }
-      const newActive = window.document.querySelector(str).querySelector("div");
-      if (newActive) {
-        newActive.classList.add("active");
-      }
-    },
     defineTheme() {
       const theme = themeStore();
       return theme;
@@ -270,10 +277,10 @@ export default {
 };
 </script>
 <style scoped>
-.active {
+.router-link-active > div {
   background-color: #ffb400 !important;
 }
-.active > svg > g > path {
+.router-link-active > svg > g > path {
   fill: black !important;
 }
 
@@ -290,7 +297,6 @@ export default {
   opacity: 0;
   transition: opacity 0.3s;
 }
-
 .tooltiptext::after {
   content: "";
   position: absolute;
@@ -301,12 +307,10 @@ export default {
   border-style: solid;
   border-color: #2b2b2b transparent transparent transparent;
 }
-
 .home:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
-
 .service:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
@@ -315,19 +319,21 @@ export default {
   visibility: visible;
   opacity: 1;
 }
-
 .portfolio:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
-
 .contact:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
-
 .blog:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
+.history:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 </style>

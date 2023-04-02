@@ -8,12 +8,16 @@
         class="xl:hidden flex justify-between w-[100%] px-2 py-1 absolute top-0 z-20 text-3xl"
         :class="[
           defineTheme().isLight
-            ? 'text-white bg-[#9e8888ad]'
-            : 'text-white bg-[#1f1e46]',
+            ? 'text-[#2B2B2B] bg-white'
+            : 'text-white bg-[#242526]',
         ]"
       >
-        <i class="bx bxs-user-detail" @click="profile"></i>
-        <i v-if="!isMenuOpen" class="bx bx-menu" @click="menu"></i>
+        <i class="bx bx-menu" @click="profile"></i>
+        <i
+          v-if="!isMenuOpen"
+          class="bx bx-dots-vertical-rounded"
+          @click="menu"
+        ></i>
       </div>
       <Profile
         class="xl:flex absolute z-20 left-0 top-0 xl:static"
@@ -24,23 +28,24 @@
           @click="profile"
         ></i>
       </Profile>
-      <main class="w-[100%] xl:w-[71%] 2xl:w-[75%] max-w-[1440px] p-[0.7%]">
-        <Home />
-        <Service />
-        <Recommendations class="mx-auto" />
+      <main
+        class="w-[100%] xl:w-[71%] 2xl:w-[75%] max-w-[1440px] p-[0.7%]"
+        :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
+      >
+        <router-view> </router-view>
         <!-- <Education /> -->
         <!-- <Work /> -->
-        <!-- <Portfolio /> -->
-        <!-- <Blog /> -->
-        <!-- <Contact /> -->
-        <!-- <Map /> -->
-        <Brands />
+
         <Footer
-          :class="[defineTheme().isLight ? 'bg-white text-[#2B2B2B]' : 'bg-[#242526] text-white']"
+          :class="[
+            defineTheme().isLight
+              ? 'bg-white text-[#2B2B2B]'
+              : 'bg-[#242526] text-white',
+          ]"
         />
       </main>
       <Sidebar
-        class="xl:block absolute sm:fixed md:fixed xl:sticky right-0 top-0 z-20"
+        class="xl:block absolute sm:fixed md:fixed xl:sticky right-0 top-0 z-50"
         :class="[isMenuOpen ? 'block' : 'hidden']"
       >
         <i

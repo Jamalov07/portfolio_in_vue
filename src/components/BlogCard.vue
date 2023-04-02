@@ -1,15 +1,14 @@
 <template>
   <div
-    class="h-full w-[250px] sm:w-[350px] xl:w-auto flex flex-col justify-between bg-white"
+    class="h-full xl:w-auto flex flex-col justify-betwee"
+    :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
   >
     <img
       src="https://picsum.photos/id/191/600/600"
       alt="img"
       class="h-[300px] w-full"
     />
-    <div
-      class="p-4 flex flex-col h-full justify-between text-[#2B2B2B] text-[18px]"
-    >
+    <div class="p-4 flex flex-col h-full justify-between text-[18px]">
       <h1 class="font-medium">How To Make Web Templates</h1>
       <p class="text-[#767676] text-[15px] font-normal">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla
@@ -25,8 +24,15 @@
   </div>
 </template>
 <script>
+import themeStore from "../store/theme";
 export default {
   name: "BlogCard",
+  methods: {
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
+  },
 };
 </script>
 <style></style>

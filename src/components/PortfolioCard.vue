@@ -6,7 +6,8 @@
     >
       <div class="text-sky-700 text-[28px] font-semibold">My Project</div>
       <div
-        class="absolute z-30 bottom-10 w-1/2 h-1/7 text-black rounded-[4px] border-[2px] border-black shadow-md gap-2 flex justify-center items-center"
+        class="absolute z-30 bottom-0 w-full h-[16%] bg-[#FFB400] flex justify-center items-center"
+        :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
       >
         <h1>View more</h1>
         <i class="bx bx-chevron-right"></i>
@@ -20,8 +21,15 @@
   </div>
 </template>
 <script>
+import themeStore from "../store/theme";
 export default {
   name: "PortfolioCard",
+  methods: {
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
+  },
 };
 </script>
 <style></style>

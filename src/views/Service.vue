@@ -4,7 +4,7 @@
     class="pt-4 sm:pt-12 h-auto flex flex-col gap-4 items-center"
     :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
   >
-    <h1 class="w-1/3 text-center text-[32px] font-bold">My Services</h1>
+    <h1 class="text-center text-[32px] font-bold">My Services</h1>
     <p
       class="text-[15px] text-[#767676] font-normal w-[90%] md:w-[50%] text-center"
     >
