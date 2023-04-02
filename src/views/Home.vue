@@ -1,46 +1,56 @@
 <template>
   <div
     id="home"
-    class="w-full px-[50px] h-[867px] flex justify-center items-center relative"
+    class="w-full h-[600px] p-5 flex justify-center items-center gap-5 relative"
+    :class="[defineTheme().isLight ? 'bg-white' : 'bg-[#242526]']"
   >
-    <img
-      src="../assets/images/GCEm26.jpg"
-      class="absolute blur-[0px] object-cover object-right xl:object-right h-full w-full"
-      alt="img"
-    />
-    <div
-      class="relative z-10 py-[70px] h-full flex flex-col justify-center items-center"
-    >
-      <h1
-        class="text-[#2B2B2B] px-3 w-full md:py-10 xl:py-0 xl:w-[700px] text-[24px] md:text-[36px] xl:text-[48px] font-bold text-center"
+    <HomeCircle class="left-5 top-5 rounded-full border-[#FFB400]" />
+    <HomeCircle class="bottom-5 right-5 rounded-full border-[#FFB400]" />
+    <HomeCircle class="left-5 bottom-5 rounded-full border-[#05FF00]" />
+    <HomeCircle class="right-5 top-5 rounded-full border-[#05FF00]" />
+    <HomeCircle class="left-[50%] bottom-10 rounded-full border-[#05FF00]" />
+    <HomeCircle class="left-20 top-20 border-[#0047FF]" />
+    <HomeCircle class="left-[30%] top-[50%] border-[#0047FF]" />
+    <div class="h-full flex flex-col justify-center items-start gap-5 p-[4%]">
+      <div
+        class="text-[120%] md:text-[180%] font-bold"
+        :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
       >
-        I’m No'monjon Jamalov ...
+        <h1>I’m No'monjon Jamalov</h1>
         <span class="text-[#FFB400]">Full Stack ( Node.js + Vue.js )</span>
-        Developer
-      </h1>
-      <p
-        class="text-[#10da42] my-10 text-[14px] md:text-[20px] xl:text-[20px] xl:px-10 font-semibold text-center"
-      >
+        <h1>Developer</h1>
+      </div>
+      <p class="text-[#767676] text-[70%]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
         feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
-        lectus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-        volutpat feugiat placerat lobortis. Natoque rutrum semper sed
-        suspendisse nunc lectus.Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum
-        semper sed suspendisse nunc lectus.
+        lectus.
       </p>
       <div
-        class="py-[18px] px-[32px] hover:bg-sky-500 hover:text-yellow-50 flex justify-between items-center bg-[#FFB400] w-[154px] text-[16px] text-[#2B2B2B] font-medium"
+        class="w-[120px] px-[2%] py-[0.8%] hover:bg-sky-500 hover:text-yellow-50 flex justify-center items-center gap-[6%] bg-[#FFB400] text-[75%] text-[#2B2B2B]"
       >
         <h1>HIRE ME</h1>
         <i class="bx bx-right-arrow-alt"></i>
       </div>
     </div>
+    <div class="h-full pr-[4%] hidden md:block">
+      <img src="https://picsum.photos/600/600" alt="img" class="h-full" />
+    </div>
   </div>
 </template>
 <script>
+import themeStore from "../store/theme";
+import HomeCircle from "../components/HomeCircle.vue";
 export default {
   name: "Home",
+  components: {
+    HomeCircle,
+  },
+  methods: {
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
+  },
 };
 </script>
 <style scoped></style>

@@ -8,7 +8,7 @@
         class="absolute w-[10px] h-[10px] border border-[#FFB400] bottom-0 right-0"
       ></div>
     </div>
-    <h1 class="text-[#767676] text-[15px] font-normal">
+    <h1 class="text-[15px] font-normal">
       {{ extra }}
     </h1>
   </div>

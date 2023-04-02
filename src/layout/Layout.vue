@@ -1,9 +1,16 @@
 <template>
-  <div class="mx-auto" :class="[defineTheme().isLight ? 'bg-[#F0F0F6]' : 'bg-[#090938]']">
-    <div class="flex sm:justify-between 2xl:justify-center 2xl:gap-4">
+  <div
+    class="mx-auto"
+    :class="[defineTheme().isLight ? 'bg-[#F0F0F6]' : 'bg-[#18191A]']"
+  >
+    <div class="flex justify-between max-w-[1980px] mx-auto">
       <div
         class="xl:hidden flex justify-between w-[100%] px-2 py-1 absolute top-0 z-20 text-3xl"
-        :class="[defineTheme().isLight ? 'text-white bg-[#9e8888ad]' : 'text-white bg-[#1f1e46]']"
+        :class="[
+          defineTheme().isLight
+            ? 'text-white bg-[#9e8888ad]'
+            : 'text-white bg-[#1f1e46]',
+        ]"
       >
         <i class="bx bxs-user-detail" @click="profile"></i>
         <i v-if="!isMenuOpen" class="bx bx-menu" @click="menu"></i>
@@ -17,19 +24,20 @@
           @click="profile"
         ></i>
       </Profile>
-      <main class="w-full md:w-[1440px] h-auto">
+      <main class="w-[100%] xl:w-[71%] 2xl:w-[75%] max-w-[1440px] p-[0.7%]">
         <Home />
         <Service />
-        <PricePlans />
-        <Recommendations />
-        <Education />
-        <Work />
-        <Portfolio />
-        <Blog />
-        <Contact />
-        <Map />
+        <Recommendations class="mx-auto" />
+        <!-- <Education /> -->
+        <!-- <Work /> -->
+        <!-- <Portfolio /> -->
+        <!-- <Blog /> -->
+        <!-- <Contact /> -->
+        <!-- <Map /> -->
         <Brands />
-        <Footer />
+        <Footer
+          :class="[defineTheme().isLight ? 'bg-white text-[#2B2B2B]' : 'bg-[#242526] text-white']"
+        />
       </main>
       <Sidebar
         class="xl:block absolute sm:fixed md:fixed xl:sticky right-0 top-0 z-20"
@@ -59,6 +67,7 @@ import Map from "../views/Map.vue";
 import Brands from "../views/Brands.vue";
 import Footer from "../components/Footer/Footer.vue";
 import themeStore from "../store/theme";
+import swiper from "../views/swiper.vue";
 export default {
   name: "Layout",
   data() {
@@ -99,6 +108,7 @@ export default {
     Map,
     Brands,
     Footer,
+    swiper,
   },
 };
 </script>

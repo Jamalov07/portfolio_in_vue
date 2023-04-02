@@ -1,20 +1,51 @@
 <template>
   <div
-    class="mt-5 sm:mt-[70px] xl:h-[200px] xl:w-full mx-4 xl:mx-0 grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-0 justify-between text-4xl sm:text-9xl text-[#767676]"
+    class="pt-5 sm:pt-[70px] grid grid-cols-4 text-[200%] md:text-[400%] text-[#767676]"
   >
     <div class="flex justify-center items-center">
-      <i class="bx bxl-stack-overflow hover:text-black"></i>
+      <i
+        class="bx bxl-stack-overflow"
+        :class="[
+          defineTheme().isLight ? 'hover:text-black' : 'hover:text-white',
+        ]"
+      ></i>
     </div>
     <div class="flex justify-center items-center">
-      <i class="bx bxl-aws hover:text-black"></i>
+      <i
+        class="bx bxl-aws"
+        :class="[
+          defineTheme().isLight ? 'hover:text-black' : 'hover:text-white',
+        ]"
+      ></i>
     </div>
     <div class="flex justify-center items-center">
-      <i class="bx bxl-spotify hover:text-black"></i>
+      <i
+        class="bx bxl-spotify"
+        :class="[
+          defineTheme().isLight ? 'hover:text-black' : 'hover:text-white',
+        ]"
+      ></i>
     </div>
     <div class="flex justify-center items-center">
-      <i class="bx bxl-jquery hover:text-black"></i>
+      <i
+        class="bx bxl-jquery"
+        :class="[
+          defineTheme().isLight ? 'hover:text-black' : 'hover:text-white',
+        ]"
+      ></i>
     </div>
   </div>
 </template>
-<script></script>
+<script>
+import themeStore from "../store/theme";
+export default {
+  name: "Brands",
+  methods: {
+    defineTheme() {
+      const theme = themeStore();
+      return theme;
+    },
+  },
+};
+</script>
 <style></style>

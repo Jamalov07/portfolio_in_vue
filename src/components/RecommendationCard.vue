@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[250px] sm:w-[350px] xl:w-auto bg-white text-[#2B2B2B] h-[323px] p-[25px] flex flex-col justify-between"
+    class="min-h-[320px] flex flex-col justify-center gap-[6%] p-[6%]"
   >
     <div class="flex gap-2 items-center text-[#FFB400]">
       <i class="bx bxs-star"></i>
@@ -14,13 +14,13 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam
       in ac dictum a urna viverra morbi. Morbi donec amet....
     </p>
-    <div class="flex gap-3">
-      <div class="w-10 h-10 sm:w-16 sm:h-16">
+    <div class="flex gap-3 items-center">
+      <div>
         <slot></slot>
       </div>
-      <div class="h-full flex justify-center items-center flex-col">
-        <h1 class="text-[18px] font-medium">{{ full_name }}</h1>
-        <h1 class="text-[#767676] text-[15px] font-normal">{{ position }}</h1>
+      <div class="h-full flex justify-center items-start flex-col">
+        <h1 class="text-[80%] font-medium">{{ full_name }}</h1>
+        <h1 class="text-[#767676] text-[60%] font-normal">{{ position }}</h1>
       </div>
     </div>
   </div>

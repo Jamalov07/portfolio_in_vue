@@ -1,21 +1,19 @@
 <template>
   <div
     id="service"
-    class="mt-4 sm:mt-[70px] md:w-full flex flex-col justify-between min-h-[723px] items-center"
+    class="pt-4 sm:pt-12 h-auto flex flex-col gap-4 items-center"
+    :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
   >
-    <h1
-      class="h-10 w-[193px] text-[32px] font-bold"
-      :class="[defineTheme().isLight ? 'text-[#2B2B2B]' : 'text-white']"
-    >
-      My Services
-    </h1>
+    <h1 class="w-1/3 text-center text-[32px] font-bold">My Services</h1>
     <p
-      class="text-[15px] text-[#767676] font-normal sm:h-[68px] mb-5 px-4 xl:mb-0 md:px-16 xl:px-0 xl:w-[438px] text-center"
+      class="text-[15px] text-[#767676] font-normal w-[90%] md:w-[50%] text-center"
     >
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
       Velit officia consequat duis enim velit mollit. lorem ipsum
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:w-full">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 w-full sm:h-[1160px] h-[2340px] md:h-[560px] md:min-h-auto gap-y-[1%] gap-x-[1%] sm:gap-y-[2%]"
+    >
       <ServiceCard title="Web Development" subTitle="Blog, E-Commerce">
         <img src="../assets/icons/coding.svg" alt="" class="pb-2" />
       </ServiceCard>

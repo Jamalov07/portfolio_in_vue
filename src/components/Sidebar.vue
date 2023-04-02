@@ -4,7 +4,7 @@
     :class="[
       defineTheme().isLight
         ? 'bg-[#9e8888ad] xl:bg-white'
-        : 'bg-[#15273def] xl:bg-[#1f1e46]',
+        : 'bg-[#242526] xl:bg-[#242526]',
     ]"
   >
     <div class="absolute top-0 left-0 xl:hidden">
@@ -24,7 +24,16 @@
         ></i>
       </div>
       <div class="mt-20 flex flex-col h-full gap-6 items-center">
-        <a href="#home" class="home" @click="changeActive('.home')">
+        <a
+          href="#home"
+          class="home relative inline-block"
+          @click="changeActive('.home')"
+        >
+          <span
+            class="tooltiptext"
+            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            >Home</span
+          >
           <div
             class="active p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -49,7 +58,17 @@
             </svg>
           </div>
         </a>
-        <a href="#service" class="service" @click="changeActive('.service')">
+        <a
+          href="#service"
+          class="service relative inline-block"
+          @click="changeActive('.service')"
+        >
+          <span
+            class="tooltiptext"
+            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            >Service</span
+          >
+
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -79,7 +98,17 @@
             </svg>
           </div>
         </a>
-        <a href="#cv" class="cvres" @click="changeActive('.cvres')">
+        <a
+          href="#cv"
+          class="cvres relative inline-block"
+          @click="changeActive('.cvres')"
+        >
+          <span
+            class="tooltiptext"
+            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            >CV</span
+          >
+
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -106,9 +135,15 @@
         </a>
         <a
           href="#portfolio"
-          class="portfolio"
+          class="portfolio relative inline"
           @click="changeActive('.portfolio')"
         >
+          <span
+            class="tooltiptext"
+            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            >Portfolio</span
+          >
+
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -133,7 +168,17 @@
             </svg>
           </div>
         </a>
-        <a href="#blog" class="blog" @click="changeActive('.blog')">
+        <a
+          href="#blog"
+          class="blog relative inline"
+          @click="changeActive('.blog')"
+        >
+          <span
+            class="tooltiptext"
+            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            >Blog</span
+          >
+
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -158,7 +203,17 @@
             </svg>
           </div>
         </a>
-        <a href="#contact" class="contact" @click="changeActive('.contact')">
+        <a
+          href="#contact"
+          class="contact relative inline-block"
+          @click="changeActive('.contact')"
+        >
+          <span
+            class="tooltiptext"
+            :class="[defineTheme().isLight ? 'bg-[#2b2b2b] text-white' : 'bg-white text-[#2B2B2B]']"
+            >Contact</span
+          >
+
           <div
             class="p-3 rounded-full bg-[#f0f0f6] flex justify-center items-center"
           >
@@ -218,8 +273,61 @@ export default {
 .active {
   background-color: #ffb400 !important;
 }
-
 .active > svg > g > path {
   fill: black !important;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  text-align: center;
+  padding: 2px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 60%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #2b2b2b transparent transparent transparent;
+}
+
+.home:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.service:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.cvres:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.contact:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.blog:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 </style>

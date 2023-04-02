@@ -47,10 +47,6 @@
       <PortfolioCard />
       <PortfolioCard />
       <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
-      <PortfolioCard />
     </div>
   </div>
 </template>
