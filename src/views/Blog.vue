@@ -1,6 +1,5 @@
 <template>
-  <div
-    id="blog"
+  <div id="blog"
     class="pt-10 xl:pt-5 flex flex-col justify-between min-h-[665px] items-center gap-4"
   >
     <h1 class="text-center text-[32px] font-bold">Blog</h1>
