@@ -30,5 +30,6 @@ export default {
   name: "Blog",
   components: { BlogCard },
 };
+
 </script>
 <style></style>
